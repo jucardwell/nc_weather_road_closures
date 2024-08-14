@@ -31,6 +31,7 @@ Project Directory/
 - output/
   - local_travel/
   - agg_local_travel/
+- script/
 
 ## **Workflow:**
 Note that some of the processes in this analysis were done outside of a scripting workflow. Those instances are denoted with a **
