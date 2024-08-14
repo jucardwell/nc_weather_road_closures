@@ -20,8 +20,16 @@ Condition: Road Closed, Road Closed with Detour, Road Impassable, Local Traffic 
 
 **2010 to 2020 Crosswalk Table:** Can be downloaded from IPUMS NHGIS (https://www.nhgis.org/geographic-crosswalks)
 
+*Researchers who do not have access to SafeGraph data or TIMS data may need to seek alternative datasets or contact the respective data providers for access. Please note that replication may be limited by the availability of these specific data sources*
+
 ## **Folder setup:**
-Create a “data” and “output” folder in your working directory. In the “data” folder, create a “daily_road_closures” folder and a “safegraph” folder. In the “output” folder, create a “local_travel” folder and an “agg_local_travel” folder. 
+Project Directory/
+├── data/
+│   ├── daily_road_closures/
+│   ├── safegraph/
+├── output/
+│   ├── local_travel/
+│   ├── agg_local_travel/
 
 ## **Workflow:**
 Note that some of the processes in this analysis were done outside of a scripting workflow. Those instances are denoted with a **
