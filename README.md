@@ -24,12 +24,12 @@ Condition: Road Closed, Road Closed with Detour, Road Impassable, Local Traffic 
 
 ## **Folder setup:**
 Project Directory/
-├── data/
-│   ├── daily_road_closures/
-│   ├── safegraph/
-├── output/
-│   ├── local_travel/
-│   ├── agg_local_travel/
+- data/
+  - daily_road_closures/
+  - safegraph/
+- output/
+  - local_travel/
+  - agg_local_travel/
 
 ## **Workflow:**
 Note that some of the processes in this analysis were done outside of a scripting workflow. Those instances are denoted with a **
