@@ -11,7 +11,7 @@ cbgs <- st_read("")
 
 
 #neighborhood analysis for home cbgs
-home_cbg <- read_csv("data/safegraph/fullsafegraph.csv") %>% mutate(GEOID = as.character(GEOID), visitor_home_cbgs = as.character(visitor_home_cbgs))
+home_cbg <- read_csv("../data/safegraph/fullsafegraph.csv") %>% mutate(GEOID = as.character(GEOID), visitor_home_cbgs = as.character(visitor_home_cbgs))
 
 length(unique(home_cbg$visitor_home_cbgs))
 #crosswalk table
@@ -43,7 +43,7 @@ everymonth_final <- safegraph_filtered_everymonth %>% arrange(desc(updated_count
 
 
 ##add routing information
-routable_bg <- read_csv("data/bg_simp_routable_manual.csv")
+routable_bg <- read_csv("../data/bg_simp_routable_manual.csv")
 
 #add cbg fid from cbg shapefile
 fid_df1 <- merge(everymonth_final, cbgs, by.x = "bg2020ge", by.y = "BGGEOID20", all.x = TRUE) %>% rename(o_fid = fid) %>% select(-POP20, -geometry) 
@@ -57,5 +57,5 @@ routable_df2 <- merge(routable_df1, routable_bg, by.x = "d_fid", by.y = "fid") %
 connected_df <- routable_df2 %>% filter(!o_fid %in% c(333,3259,1543) & !d_fid %in% c(333, 3259, 1543)) %>% select(d_fid, o_fid, perc, perc, o_node_id, d_node_id)
 
 
-write_csv(connected_df, "data/local_travel_od.csv")
+write_csv(connected_df, "../data/local_travel_od.csv")
 
