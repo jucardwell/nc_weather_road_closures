@@ -8,10 +8,10 @@ library(tidyverse)
 library(stringdist)
 
 #closure data- manual 
-closure_data <- read_csv("data/unmatched_closures.csv")
+closure_data <- read_csv("../data/unmatched_closures.csv")
 
 #osm road data
-road_data <- st_read("data/nc_sf_network.shp") %>% st_transform(st_crs(2264))
+road_data <- st_read("../data/nc_sf_network.shp") %>% st_transform(st_crs(2264))
 
 #spatialize closures
 spatial_closures <- closure_data %>% st_as_sf(coords = c("Longitude", "Latitude"), crs = 4326) %>% 
@@ -84,4 +84,4 @@ binded_closures <- rbind(spatial_closures_na, spatial_closures_nona)
 non_spatial <- binded_closures %>% st_drop_geometry()
 
 #writes file
-write_csv(non_spatial, "data/unmatched_matched.csv")
+write_csv(non_spatial, "../data/unmatched_matched.csv")
