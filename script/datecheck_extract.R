@@ -136,4 +136,4 @@ final_fix <- interim_final_fix %>% mutate(add = case_when(EventName =="Hurrrican
 merged_final <- rbind(final_fix, interim_final_nofix)  
 
 #save new full dataset
-write_csv(merged_final, "data/final_road_closure.csv")
+write_csv(merged_final, "../data/final_road_closure.csv")
