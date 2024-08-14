@@ -15,4 +15,4 @@ nc_roads <- oe_get_network(place = "north carolina", mode = "driving", extra_tag
 nc_roads$seg_id <- seq.int(nrow(nc_roads))
 
 #write. Replace "" with file name
-st_write(nc_roads, "data/nc_road_network.shp")
+st_write(nc_roads, "../data/nc_road_network.shp")
