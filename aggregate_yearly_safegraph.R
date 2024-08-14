@@ -10,7 +10,7 @@ cbgs2010 <- block_groups(state = "NC", year = 2010)
 cbgs2020 <- block_groups(state = "NC", year = 2020)
 
 #get daytime home files
-yearly_files <- list.files("data/safegraph", full.names = TRUE)
+yearly_files <- list.files("../data/safegraph", full.names = TRUE)
 
 ##create large dataframe of all years
 # Use lapply to read all files and store them in a list
@@ -26,4 +26,4 @@ combined_data <- do.call(rbind, data_list)
 aggregated_data <- combined_data %>% mutate(GEOID = as.character(GEOID)) %>% group_by(visitor_home_cbgs, GEOID) %>% summarise(count = sum(count), month_count = sum(n_months)) %>% filter((visitor_home_cbgs %in% cbgs2010$GEOID10) & (GEOID %in% cbgs2020$GEOID)) 
 
 
-write_csv(aggregated_data, "data/safegraph/full_safegraph.csv")
+write_csv(aggregated_data, "../data/safegraph/full_safegraph.csv")
