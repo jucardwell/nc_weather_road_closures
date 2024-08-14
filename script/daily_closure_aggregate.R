@@ -6,7 +6,7 @@ library(sf)
 
 #bgs
 bg_data <- st_read("")
-closure_files <- list.files("output/agg_local_travel", full.names = TRUE)
+closure_files <- list.files("../output/agg_local_travel", full.names = TRUE)
 total_days <- 2743
 
 # Initialize an empty data frame to store the combined data
@@ -35,4 +35,4 @@ for (file in closure_files) {
 combined_data <- combined_data %>% rename("o_fid" = "2016-01-01_o_fid", "tot_trips" = "2016-01-01_tot_trips")
 
 
-write_csv(combined_data, "output/aggregated_closure_impact.csv")
+write_csv(combined_data, "../output/aggregated_closure_impact.csv")
