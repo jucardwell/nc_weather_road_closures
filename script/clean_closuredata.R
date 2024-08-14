@@ -129,5 +129,5 @@ agg_closure_events <- closure_events %>% group_by(IncidentID) %>% summarise(star
 
 
 #write aggregated events as a .csv
-write_csv(agg_closure_events, "data/aggregated_road_closuress.csv")
+write_csv(agg_closure_events, "../data/aggregated_road_closuress.csv")
 
