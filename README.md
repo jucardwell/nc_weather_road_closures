@@ -1,5 +1,6 @@
 # nc_weather_road_closures
 This repository contains the scripts utilized in analysis for manuscript "Impacts of weather-related road closures on habitual travel in North Carolina"
+For questions or issues related to this code, please contact [Julia Cardwell](https://jucardwell.github.io/).
 
 ## **Software environment:** 
 Software environment and package versions can be viewed in “environment.txt”
