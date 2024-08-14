@@ -7,11 +7,11 @@ library(tidyverse)
 library(sf)
 
 #read in dodgr network
-nc_roads <- dodgr_load_streetnet("data/nc_weighted_network.Rds")
+nc_roads <- dodgr_load_streetnet("../data/nc_weighted_network.Rds")
 nc_roads <- dodgr_contract_graph(nc_roads) %>% as_tibble()
 
 #read in sf network
-nc_sf <- st_read("data/nc_sf_network.shp") 
+nc_sf <- st_read("../data/nc_sf_network.shp") 
 
 ##check that edge_ids do not match
 unique(nc_roads$edge_id %in% nc_sf$edge_id)
@@ -35,7 +35,7 @@ merged_df <- merge(simp_nc_sf, simp_nc_roads, by = c("from_id", "to_id", "name",
 
 ##set up process to identify new edge_ids that match the dodgr network for each
 ##closure in the closure file
-closure_data <- read_csv("data/final_road_closures.csv") %>% mutate(edge_id_dodgr = "")
+closure_data <- read_csv("../data/final_road_closures.csv") %>% mutate(edge_id_dodgr = "")
 
 ##add a new column that has the dodgr network edgeids that match the sf network edge ids
 for (i in 1:nrow(closure_data)) {
@@ -47,7 +47,7 @@ for (i in 1:nrow(closure_data)) {
 }
 
 #save file
-write_csv(closure_data, "data/dodgr_id_road_closures.csv")
+write_csv(closure_data, "../data/dodgr_id_road_closures.csv")
 
 
 
