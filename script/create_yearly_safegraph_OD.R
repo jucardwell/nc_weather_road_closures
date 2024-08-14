@@ -40,7 +40,7 @@ for (year in list_years){
   }
   #aggregate for yearly data
   agg_yearly_df <- yearly_df %>% group_by(visitor_home_cbgs, GEOID) %>% summarise(count = sum(count), n_months = n())
-  write_csv(agg_yearly_df, paste("data/safegraph/", year, "_2010cbg_home.csv", sep = ""))
+  write_csv(agg_yearly_df, paste("../data/safegraph/", year, "_2010cbg_home.csv", sep = ""))
 }
 
 
