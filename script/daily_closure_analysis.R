@@ -9,7 +9,7 @@ library(RColorBrewer)
 tmap_mode("plot")
 
 #read in aggregated daily closure data (wide-form)
-agg_data <- read_csv("output/aggregated_closure_impact.csv")
+agg_data <- read_csv("../output/aggregated_closure_impact.csv")
 bg_data <- st_read("")
 
 base_df <- agg_data %>% select(o_fid, tot_trips)
