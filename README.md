@@ -9,11 +9,11 @@ Software environment and package versions can be viewed in “environment.txt”
 
 **Road Closure Data:** TIMS closure data was downloaded from NCDOT’s TIMS system (https://tims.ncdot.gov/tims/V2/Login?ReturnUrl=%2ftims) on 07-05-2023. Downloading from TIMS requires TIMS admin access as an External User, which can be granted by contacting NCDOT Help Desk at 919-707-7000 or dothelp.gov. For replication of this project, a user would need to make their own request for the closure data. 
 
-TIMS was queries using the “deep search” function, as suggested by NCDOT employee. Query filters were suggested by NCDOT employee. 
+TIMS was queries using the “deep search” function, as suggested by an NCDOT employee. Query filters were suggested by an NCDOT employee. 
 Incident Types: Weather Event, Road Obstruction
 Condition: Road Closed, Road Closed with Detour, Road Impassable, Local Traffic Only
 
-**SafeGraph Data:** Monthly patterns SafeGraph data from 2018-2022 was obtained through an academic research agreement. This raw data cannot be publicly shared. For replication of this project, a user would need to make their own request for the Safegraph data.
+**SafeGraph Data:** Monthly patterns SafeGraph data from 2018-2022 was obtained through an academic research agreement. This raw data cannot be publicly shared. For replication of this project, a user would need to make their own request for the SafeGraph data.
 
 **North Carolina Block Group and County**: North Carolina block group and county shapefile can be downloaded from the United States Census Bureau (https://www.census.gov/geographies/mapping-files/2020/geo/tiger-line-file.html)
 
