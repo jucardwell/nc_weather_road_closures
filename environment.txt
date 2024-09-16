@@ -1,5 +1,5 @@
 RStudio== c(2023, 12, 1, 402)
-R== R version 4.3.1 (2023-06-16)
+R== R version 3.6
 tigris==2.0.4
 osmextract==0.5.1
 osmdata==0.2.5
